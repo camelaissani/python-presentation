@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Introduction to Python</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+        <style>
+            div.fullscreen, .fullscreen {
+                witdh: 100%;
+                text-align: left;
+                padding: 0 100px;
+            }
+
+            div.reduce-font-size, .reduce-font-size, .reduce-font-size p {
+                font-size: 30px;
+            }
+
+            .code-part {
+                color: #13DAEC;
+            }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h2>Introduction to PYTHON 2</h2>
+                    <br>
+                    <p style="margin:0 auto;width: 90%;">Emphasize code readability, and allow programmers to express concepts in fewer lines of code than would be possible in languages such as C++ or Java.</p>
+                    <br>
+                    <p>
+                        <small>
+                            Created by <a href="http://www.nuageprive.fr" target="_blank">Camel Aissani</a> / <a href="http://twitter.com/camelaissani" target="_blank">@camelaissani</a>
+                        </small>
+                    </p>
+                    <p>
+                        <small>Inspired by the book of Swaroop C H - <a href="http://www.swaroopch.com/notes/python/" target="_blank">A Byte of Python</a></small>
+                    </p>
+                </section>
+            </div>
+
+            <div class="slides">
+                <section>
+                    <h3>History</h3>
+                    <br>
+                    <p style="margin:0 auto;width: 70%;">Python was conceived in the late 1980s by Guido van Rossum.</p>
+                    <p>Many of Python's features originated from an interpreted language called ABC.</p>
+                    <br>
+                    <ul>
+                        <li>First version was released in February 1991</li>
+                        <li>Python 2.0 was released on 16 October 2000</li>
+                        <li>Python 3.0 was released on 3 December 2008</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Ugh!</h3>
+                    <table style="margin:0 auto;width=100%;">
+                    <tr>
+                    <td style="vertical-align:top;">
+                        <img src="images/Ugh.gif" alt="ugh!">
+                        <br>
+                        <h4>Where are my curly brackets?!</h4>
+                    </td>
+                    <td>
+                        <img src="images/python-code.jpg" alt="python code sample">
+                    </td>
+                    </tr>
+                    </table>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Coool!</h3>
+                    <img src="images/super.gif" alt="super!">
+                    <h4>After few weeks of code</h4>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Basics</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <ul>
+                        <li><h3>Numbers</h3><p>Mainly of two types - integers and floats.</p><br></li>
+
+                        <li>
+                            <h3>Strings</h3>
+                            <p>- Specified between double quotes or simple quotes</p>
+                            <p>- You can specify multi-line strings using triple quotes - (""" or ''').</p>
+
+                            <pre><code data-trim contenteditable>
+        '''This is a multi-line string. This is the first line.
+        This is the second line.
+        "What's your name?," I asked.
+        He said "Bond, James Bond."
+        '''
+                            </code></pre>
+                            <p>- Strings are immutable </p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Focus on few string manipulations</h3>
+                    <br>
+                    <div class="fullscreen reduce-font-size">
+                        <p>- The format method - Best practice to concatenate strings:</p>
+                        <pre><code data-trim contenteditable>
+age = 20
+name = 'Swaroop'
+
+print '{0} was {1} years old when he wrote this book'.format(name, age)
+print 'Why is {0} playing with that python?'.format(name)
+
+#or
+
+print '{} was {} years old when he wrote this book'.format(name, age)
+print 'Why is {} playing with that python?'.format(name)
+                        </code></pre>
+                        <br>
+                        <p>- Raw String</p>
+                        <p>If you need to specify some strings whithout esacping sequences, then what you need is to specify a raw string by prefixing r or R to the string. An example is:</p>
+                        <pre><code data-trim contenteditable>
+r"Newlines are indicated by \n"
+                        </code></pre>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Operators</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <ul>
+                    <li><p><b>For calculating </b></p>
+                        <table style="width:100%;">
+                            <tr><td><span class="code-part">+</span> (plus)</td><td><span class="code-part">-</span> (minus)</td><td><span class="code-part">*</span> (multiply)</td></tr>
+                            <tr><td><span class="code-part">**</span> (power)</td><td><span class="code-part">/</span> (divide)</td><td><span class="code-part">%</span> (modulo)</td></tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li><p><b>For comparing</b></p>
+                        <table style="width:100%;">
+                            <tr><td><span class="code-part">&lt;</span> (less than)</td><td><span class="code-part">&lt;=</span> (less than or equal to)</td></tr>
+                            <tr><td><span class="code-part">&gt;</span> (greater than)</td><td><span class="code-part">&gt;=</span> (greater than or equal to)</td></tr>
+                            <tr><td><span class="code-part">==</span> (equal to)</td><td><span class="code-part">!=</span> (not equal to)</td></tr>
+                            <tr><td colspan=2>&nbsp;</td></tr>
+                            <tr><td><span class="code-part">not</span> (boolean NOT)</td><td></td></tr>
+                            <tr><td><span class="code-part">and</span> (boolean AND)</td><td><span class="code-part">or</span> (boolean OR)</td></tr>
+                        </table>
+                        <br>
+                    </li>
+                    <li><p><b>For playing with bit </b></p>
+                        <table style="width:100%;">
+                            <tr><td><span class="code-part">&lt;&lt;</span> (left shift)</td><td><span class="code-part">&gt;&gt;</span> (right shift)</td><td><span class="code-part">&amp;</span> (bit-wise AND)...</td> </tr>
+                        </table>
+                    </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Statements</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>The if statement</h3>
+                    <br>
+                        <pre><code data-trim contenteditable>
+number = 23
+guess = int(raw_input('Enter an integer : '))
+
+if guess == number:
+    print 'Congratulations, you guessed it.'
+    print '(but you do not win any prizes!)'
+
+elif guess < number:
+    print 'No, it is a little higher than that'
+
+else:
+    print 'No, it is a little lower than that'
+
+print 'Done'
+                        </code></pre>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>The while Statement</h3>
+                    <br>
+                    <pre><code data-trim contenteditable>
+number = 23
+running = True
+
+while running:
+    guess = int(raw_input('Enter an integer : '))
+
+    if guess == number:
+        print 'Congratulations, you guessed it.'
+        running = False
+    elif guess < number:
+        print 'No, it is a little higher than that.'
+    else:
+        print 'No, it is a little lower than that.'
+else:
+    print 'The while loop is over.'
+
+print 'Done'
+                    </code></pre>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Loops</h1>
+                    <img src="images/loop.gif" alt="loop">
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>The for loop</h3>
+                    <pre><code data-trim contenteditable>
+for i in range(1, 5):
+    print i
+else:
+    print 'The for loop is over'
+                    </code></pre>
+                    <h3>The break Statement</h3>
+                    <pre><code data-trim contenteditable>
+while True:
+    s = raw_input('Enter something : ')
+    if s == 'quit':
+        break
+    print 'Length of the string is', len(s)
+print 'Done'
+                    </code></pre>
+                    <h3>The continue Statement</h3>
+                    <pre><code data-trim contenteditable>
+while True:
+    s = raw_input('Enter something : ')
+    if s == 'quit':
+        break
+    if len(s) < 3:
+        print 'Too small'
+        continue
+    print 'Input is of sufficient length'
+    # Do other kinds of processing here...
+                    </code></pre>
+                </section>
+            </div>
+
+            <div class="slides">
+                <section>
+                    <h3>The with statement</h3>
+                    <p>Acquiring a resource in the try block and subsequently releasing the resource in the finally block.</p>
+                    <p><span class="code-part">with</span> statement enables this in a clean manner:</p>
+                    <pre><code data-trim contenteditable>
+with open("poem.txt") as f:
+    for line in f:
+        print line,
+                    </code></pre>
+                    <a href="http://effbot.org/zone/python-with-statement.htm" target="_blank">more</a>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Function</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <div class="fullscreen reduce-font-size">
+                    <br>
+                    <p> Functions are defined using the def keyword and ended with a colon:</p>
+                    <pre><code data-trim contenteditable>
+def find_max(a, b):
+   '''Gets the maximum of two numbers.
+   The two values must be integers.'''
+    if a > b:
+        return a
+    if a == b:
+        return None
+    return b
+
+max = find_max(3, 4) # call the function
+if max is not None:
+    print max, 'is maximum'
+else:
+    print 'values are identical'
+                    </code></pre>
+                    <br>
+                    <p>Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings.</p>
+                    <p>print <span class="code-part">find_max.__doc__</span> returns</p>
+                    <pre>
+Gets the maximum of two numbers.
+The two values must be integers.</pre>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <p>Default Argument Values</p>
+                    <br>
+                    <pre><code data-trim contenteditable>
+def func(a, b=5, c=10):
+    print 'a is', a, 'and b is', b, 'and c is', c
+
+func(1)
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+                    </code></pre>
+                    <p>Output</p>
+                    <pre>
+a is 1 and b is 5 and c is 10
+a is 3 and b is 7 and c is 10
+a is 25 and b is 5 and c is 24
+a is 100 and b is 5 and c is 50</pre>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <p><b>VarArgs parameters</b></p>
+                    <br>
+                    <div class="fullscreen reduce-font-size">
+                    <p>Sometimes you might want to define a function that can take any number of parameters, this can be achieved by using the stars</p>
+                    <br>
+                    <pre><code data-trim contenteditable>
+def total(initial=5, *numbers, **keywords):
+    count = initial
+    for number in numbers:
+        count += number
+    for key in keywords:
+        count += keywords[key]
+    return count
+
+print total(10, 1, 2, 3, vegetables=50, fruits=100)
+                    </code></pre>
+                    <br>
+                    <p> *numbers parameter is transformed into a tuple </p>
+                    <p> **keywords are collected as a dictionary </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="slides">
+                <section>
+                    <p><b>Lambda Form</b></p>
+                    <br>
+                    <p>A lambda statement is used to create new function objects</p>
+                    <br>
+                    <p>Ascending sort on key 'y'</p>
+                    <pre><code data-trim contenteditable>
+points = [ { 'x' : 2, 'y' : 3 },
+           { 'x' : 4, 'y' : 1 } ]
+points.sort(key=lambda i : i['y'])
+                    </code></pre>
+                    <br>
+                    <p>Output</p>
+                    <pre>
+[{'y': 1, 'x': 4}, {'y': 3, 'x': 2}]</pre>
+                </section>
+            </div>
+
+            <div class="slides">
+                <section>
+                    <h3>Scope</h3>
+                    <p>All variables have the scope of the block they are declared</p>
+                    <p>in starting from the point of definition of the name.</p>
+                    <br>
+                    <div class="fullscreen reduce-font-size">
+                    <table style="width:100%;">
+                    <tr>
+                    <td style="width:50%;">
+                    <p>Variable declared in main block
+                    <pre><code data-trim contenteditable>
+x = 50
+
+def func(x):
+    print 'x is', x
+    x = 2
+    print 'Changed local x to', x
+
+func(x)
+print 'x is still', x</code></pre>
+                    </td>
+                    <td>
+                    <p>Usage of the <span class="code-part">global</span> statement</p>
+                    <pre><code data-trim contenteditable>
+x = 50
+
+def func():
+    global x
+
+    print 'x is', x
+    x = 2
+    print 'Changed global x to', x
+
+func()
+print 'Value of x is', x
+                    </code></pre>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <p>Output:</p>
+                    <pre>
+x is 50
+Changed local x to 2
+x is still 50       </pre>
+                    </td>
+                    <td>
+                    <p>Output:</p>
+                    <pre>
+x is 50
+Changed global x to 2
+Value of x is 2     </pre>
+                    </td>
+                    </tr>
+                    </table>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Module</h3>
+                    <br>
+                    <p>The simplest way is to create a file with a .py extension that contains functions and variables.</p>
+                    <br>
+                    <p>A module can be imported by another program to make use of its functionality.</p>
+                    <pre><code data-trim contenteditable>
+import sys
+
+print('The command line arguments are:')
+for i in sys.argv:
+    print i
+                    </code></pre>
+                    <p>Output</p>
+                    <pre>
+The command line arguments are:
+module_using_sys.py
+we
+are
+arguments</pre>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                <p>Other kind of import</p>
+                <br>
+                <pre><code data-trim contenteditable>
+from math import sqrt
+print "Square root of 16 is", sqrt(16)
+                </code></pre>
+                <small>Avoids typing the <span class="code-part">math.</span> everytime.</small>
+                <br>
+                <pre><code data-trim contenteditable>
+from mymodule import *
+                </code></pre>
+                <small>This will import all public names of your module.</small>
+                <br>
+                <pre><code data-trim contenteditable>
+import os as real_os
+from os import fdopen as os_fdopen, exit, stat as os_stat
+                </code></pre>
+                <small>Binds objects from that module to a local name</small>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <p>Module's name</p>
+                    <br>
+                    <p>Every module has a name and statements in a module can find out the name of their module.</p>
+                    <br>
+                    <pre><code data-trim contenteditable>
+if __name__ == '__main__':
+    print 'This program is being run by itself'
+else:
+    print 'I am being imported from another module'
+                    </code></pre>
+                    <br>
+                    <p>This is handy for the particular purpose of figuring out whether the module is being run standalone or being imported</p>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Package</h3>
+                    <br>
+                    <p>Packages are just folders of modules with a special <span class="code-part">__init__.py</span> file that indicates</p>
+                    <p>to Python that this folder is special because it contains Python modules.</p>
+                    <br>
+                    <p>This is how you would structure the folders:</p>
+                    <pre>
+- <some folder present in the sys.path>/
+    - world/
+        - __init__.py
+        - asia/
+            - __init__.py
+            - india/
+                - __init__.py
+                - foo.py
+        - africa/
+            - __init__.py
+            - madagascar/
+                - __init__.py
+                - bar.py</pre>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Data Structures</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <ul>
+                    <li>
+                        <b>List</b>
+                        <div class="reduce-font-size">
+                        <p>Ordered collection of items.</p>
+                        <p>List is a mutable data type.</p>
+                        </div>
+                        <pre style="width:100%;"><code data-trim contenteditable>
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+                        </code></pre>
+                        <br>
+                    </li>
+                    <li>
+                        <b>Tuple</b>
+                        <div class="reduce-font-size">
+                        <p>Tuples are used to hold together multiple items.</p>
+                        <p>They are immutable.</p>
+                        </div>
+                        <pre><code data-trim contenteditable>
+zoo = ('python', 'elephant', 'penguin')
+                        </code></pre>
+                    </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <ul>
+                    <li>
+                        <b>Dictionary</b>
+                        <div class="reduce-font-size">
+                        <p>A dictionary is like an address-book, you can find by knowing only his/her name to get values (details).</p>
+                        <p>You can use only immutable objects (like strings) for the keys of a dictionary.</p>
+                        <p>Values can use either immutable or mutable objects.</p>
+                        </div>
+                        <br>
+                        <pre><code data-trim contenteditable>
+ab = {  'Swaroop'   : 'swaroop@swaroopch.com',
+        'Larry'     : 'larry@wall.org',
+        'Matsumoto' : 'matz@ruby-lang.org',
+        'Spammer'   : 'spammer@hotmail.com'
+    }
+                        </code></pre>
+                    </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <ul>
+                    <li>
+                        <b>Sequence</b>
+                        <div class="reduce-font-size">
+                        <p>Lists, tuples and strings are examples of sequences.</p>
+                        <p>Indexing operation</p>
+                        </div>
+                        <pre><code data-trim contenteditable>
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+print 'Item 0 is', shoplist[0]
+                        </code></pre>
+                        <div class="reduce-font-size">
+                        <p>Slicing operation</p>
+                        </div>
+                        <pre><code data-trim contenteditable>
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+print 'Item 1 to 3 is', shoplist[1:3]
+print 'Item 2 to end is', shoplist[2:]
+print 'Item 1 to -1 is', shoplist[1:-1]
+print 'Item start to end is', shoplist[:]
+                        </code></pre>
+                    </li>
+                    <li>
+                        <b>Set</b>
+                        <div class="reduce-font-size">
+                        <p>Sets are unordered collections of unique elements.</p>
+                        </div>
+                        <pre><code data-trim contenteditable>
+bri = set(['brazil', 'russia', 'india'])
+                        </code></pre>
+                    </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Class</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <div class="fullscreen">
+                    <p>Objects are instances of the class.</p>
+                    <br>
+                    <table>
+                    <tr>
+                    <td style="vertical-align:top;width:50%;">
+                    <pre style="width:100%;"><code data-trim contenteditable>
+class Robot:
+
+    population = 0
+
+    def __init__(self, name):
+        self.name = name
+        print "(Initializing {})".format(self.name)
+        Robot.population += 1
+
+    def say_hi(self):
+        print "Greetings, my masters call me {}.".format(self.name)
+
+    @classmethod
+    def how_many(cls):
+        print "We have {:d} robots.".format(cls.population)
+                    </code></pre>
+                    </td>
+                    <td>
+                        <div class="reduce-font-size" style="padding: 0 0 0 20px;">
+                            <ul>
+                                <li style="margin-bottom:20px;"><span class="code-part">self</span> variable refers to the object itself.</li>
+                                <li style="margin-bottom:20px;"><span class="code-part">__init__</span> is the constructor of the class.</li>
+                                <li style="margin-bottom:20px;"><span class="code-part">population</span> is a class variable shared by every instance.</li>
+                                <li style="margin-bottom:20px;"><span class="code-part">self.name</span> is a variable owned by each instance.</li>
+                                <li style="margin-bottom:20px;"><span class="code-part">say_hi</span> is a method of the class.</li>
+                            </ul>
+                        </div>
+                    </td>
+                    </tr>
+                    </table>
+                    </div>
+                    <br>
+                    <div class="fullscreen reduce-font-size">
+                        <p>Decorators <span class="code-part">@classmethod</span> or a <span class="code-part">@staticmethod</span> used for method that belongs to the class and not to the object.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                <h3>Private Variables</h3>
+                <br>
+                <div class="reduce-font-size">
+                    <p>All class members are public. There is one exception if you use data members</p>
+                    <p>with names using the double underscore prefix such as <span class="code-part">__privatevar</span>.</p>
+                    <p>Those member are considered as &quot;private&quot;.</p>
+                    <p>Name-mangling is only used to avoid name clashes with names defined in subclasses.</p>
+                    <br>
+                    <p>Also, by convention, a name prefixed with an underscore (e.g. _spam)</p>
+                    <p>should be treated as a non-public part of the API</p>
+                    <br>
+                    <p><a href="http://stackoverflow.com/questions/70528/why-are-pythons-private-methods-not-actually-private" target="_blank">more</a></p>
+                </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Inheritance</h3>
+                    <div class="fullscreen">
+                    <table style="width:100%;">
+                        <tr>
+                        <td style="width:45%;vertical-align:top">
+                        <pre style="width:100%;"><code style="max-height:none;" data-trim contenteditable>
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print '(Initialized SchoolMember: {})'.format(self.name)
+
+    def tell(self):
+        '''Tell my details.'''
+        print 'Name:"{}" Age:"{}"'.format(self.name, self.age),
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print '(Initialized Teacher: {})'.format(self.name)
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print 'Salary: "{:d}"'.format(self.salary)
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+                        </code></pre>
+                        </td>
+                        <td>
+                            <div style="padding:0 0 0 20px;" class="reduce-font-size">
+                                <ul>
+                                    <li style="margin-bottom:25px;">To use inheritance, we specify the base class names in a tuple</li>
+                                    <li style="margin-bottom:25px;"><span class="code-part">__init__</span> method of the base class is explicitly called using the <span class="code-part">self</span> variable</li>
+                                    <li style="margin-bottom:25px;">From an inherited class we can call methods of the base class by prefixing the method by the base class name</li>
+                                    <li>Multiple inheritance is authorized in Python, just specify more than one class in the inheritance tuple</li>
+                                </ul>
+                            </div>
+                        </td>
+                        </tr>
+                    </table>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Decorators</h3>
+                    Decorators are a shortcut to applying wrapper functions
+                    <div class="fullscreen">
+                    <pre style="width:100%;"><code style="max-height:none;" data-trim contenteditable>
+def makebold(fn):
+    def wrapped():
+        return "<b>" + fn() + "</b>"
+    return wrapped
+
+def makeitalic(fn):
+    def wrapped():
+        return "<i>" + fn() + "</i>"
+    return wrapped
+
+@makebold
+@makeitalic
+def hello():
+    return "hello world"
+
+print hello() ## returns <b><i>hello world</i></b>
+                    </code></pre>
+                    </div>
+                    <p>This is helpful to "wrap" functionality with the same code over and over again.</p>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h3>Exceptions</h3>
+                    <div class="fullscreen reduce-font-size">
+                    <p>The error or exception that you can raise should be a class which directly or indirectly must be a derived class of the Exception class.</p>
+                    <pre style="width:100%;"><code style="max-height:none;" data-trim contenteditable>
+import sys
+try:
+    do_some_stuff()
+except: # catch *all* exceptions
+    e = sys.exc_info()[0]
+    write_to_page( "<p>Error: %s</p>" % e )
+    raise # will re-raise the last exception
+finally:
+    cleanup_stuff()
+                    </code></pre>
+                    </div>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <h1>Q&A</h1>
+                </section>
+            </div>
+            <div class="slides">
+                <section>
+                    <img src="images/thanks.gif" alt="thanks!">
+                </section>
+            </div>
+        </div>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
